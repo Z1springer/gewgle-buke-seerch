@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import logo from "./logo.svg";
 import Nav from "./components/Nav";
+import Bukes from "./pages/Bukes";
 
 import "./App.css";
 
@@ -12,14 +12,14 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path={"/"}>
-            <Books />
+            <Bukes />
           </Route>
-          <Route exact path="/books/:id">
+          {/* <Route exact path="/books/:id">
             <Individual />
           </Route>
           <Route>
             <Favourites />
-          </Route>
+          </Route> */}
         </Switch>
       </div>
     </Router>

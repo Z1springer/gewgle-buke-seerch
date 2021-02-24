@@ -7,4 +7,19 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
-export default Books;
+function Bukes() {
+  const [bukes, setBukes] = useState([]);
+  const [bukeTing, setBukeTing] = useState({});
+
+  useEffect(() => {
+    lodeBukes();
+  }, []);
+
+  function lodeBukes() {
+    API.getBukes()
+      .then((res) => setBukes(res.data))
+      .catch((err) => console.log(err));
+  }
+}
+
+export default Bukes;
