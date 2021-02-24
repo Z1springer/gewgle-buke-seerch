@@ -68,19 +68,31 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 2. Add code to connect to a MongoDB database named `googlebooks` using the mongoose npm package.
 
+- pseudocode here at least
+
 3. Using mongoose, then create a Book schema.
 
 4. At a minimum, books should have each of the following fields:
 
+```
+const bukeSchema = new Schema({
+
 - `title` - Title of the book from the Google Books API
-
+  title: { type: String, required: true },
 - `authors` - The books's author(s) as returned from the Google Books API
-
+  author: { type: String, required: true },
 - `description` - The book's description as returned from the Google Books API
-
+  description: String,
 - `image` - The Book's thumbnail image as returned from the Google Books API
-
+  img: String,
 - `link` - The Book's information link as returned from the Google Books API
+  link: String
+  });
+```
+
+const Book = mongoose.model("Book", bukeSchema);
+
+module.exports = Books
 
 - Creating `documents` in your `books` collection similar to the following:
 
