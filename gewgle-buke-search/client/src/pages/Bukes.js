@@ -15,6 +15,7 @@ function Bukes() {
     lodeBukes();
   }, []);
 
+  // loads all of the books and sets them to bukes
   function lodeBukes() {
     API.getBukes()
       .then((res) => setBukes(res.data))

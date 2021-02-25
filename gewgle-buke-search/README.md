@@ -68,8 +68,6 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 2. Add code to connect to a MongoDB database named `googlebooks` using the mongoose npm package.
 
-- pseudocode here at least
-
 3. Using mongoose, then create a Book schema.
 
 4. At a minimum, books should have each of the following fields:
